@@ -3,6 +3,7 @@
     width: 250px;
     font-size: 14px;
     border: 2px solid black;
+    background-color: #FFFCF2;
 }
 
 .submit-button {
@@ -12,7 +13,7 @@
     font-size: 14px;
     border: 2px solid black;
     color: #022B3A;
-    background-color: #E1E5F2;
+    background-color: #FFFCF2;
 }
 
 .submit-button:hover {

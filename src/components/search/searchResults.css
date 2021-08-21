@@ -10,9 +10,9 @@
 .intro-text {
     margin-top: 180px;
     font-size: 42px;
-    color: #E1E5F2;
-    font-family: 'Anton', sans-serif;
-    text-shadow: 1px 1px 1px #022B3A;
+    color: #FFFCF2;
+    font-family: 'Merriweather Sans', sans-serif;
+    text-shadow: 1px 1px 5px black;
 }
 
 .individual-movie {
@@ -31,6 +31,7 @@
     padding: 5px;
     background-color: #570000;
     margin: auto;
+    color: #FFFCF2;
     
 }
 
