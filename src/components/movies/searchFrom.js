@@ -1,15 +1,14 @@
-export default function SearchForm() {
+export default function SearchForm({ handleSubmit, handleChange, searchString }) {
 
     return (
         <div>
-            <form className="form-horizontal">
+            <form className="form-horizontal" onSubmit={handleSubmit}>
                 <input
                     className="search-bar"
-                    placeholder="Search"
                     type="text"
-                    name="searchString"
-                    required
                     placeholder="Search a movie..."
+                    onChange={handleChange}
+                    value={searchString}
                 />
                 <button type="submit">Search</button>
             </form>
