@@ -47,7 +47,7 @@ const Movie = () => {
         <SearchForm handleChange={handleChange} handleSubmit={handleSubmit} searchString={searchString} />
       </div>
       <Switch>
-        <Route path="/movies" exact render={() => <SearchResults movies={movies} />} />
+        <Route path="/" exact render={() => <SearchResults movies={movies} />} />
         <Route path='/:id' component={MovieInfo} />
       </Switch>
     </>

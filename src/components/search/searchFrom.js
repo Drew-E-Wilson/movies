@@ -7,7 +7,7 @@ export default function SearchForm({ handleSubmit, handleChange, searchString })
 
     //function designed to take you back to the home page when you search for a new title
     const newSearch = () => {
-        return history.push('./movies')
+        return history.push('./')
     }
 
     return (
