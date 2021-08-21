@@ -8,6 +8,7 @@ body {
   box-sizing: border-box;
   background-image: url('https://images.pexels.com/photos/7234227/pexels-photo-7234227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
   background-position: cover;
+  background-size: cover;
 }
 
 code {

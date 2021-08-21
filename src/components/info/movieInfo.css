@@ -9,12 +9,28 @@
     display: flex;
     justify-content: center;
     background-image: linear-gradient(#FFFCF2, #c2b6b5);
-    /* background-color: #FFFCF2; */
+    background-size: cover;
     height: 90vh;
-    
 }
 
 .detail-container {
-    
     max-width: 700px;
+    padding: 0px 10px;
+}
+
+@media only screen and (max-width: 500px) {
+    .info_img {
+        width: 180px;
+        height: 240px;
+        margin-top: 20px;
+    }
+    .movie-description{
+        font-size: 14px;
+    }
+    .year-description {
+        font-size: 16px;
+    }
+    .detail-background{
+        height: auto;
+    }
 }

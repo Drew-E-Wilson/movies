@@ -29,9 +29,9 @@ export default function MovieInfo(props, { movies }) {
     return (
         <div className="detail-background">
             <div className="detail-container">
-                <img src={details.img} className="info_img" />
-                <h3>Year Released: {details.year} | Rated: {details.rated}</h3>
-                <h4>{details.description}</h4>
+                <img src={details.img} className="info_img" alt="" />
+                <h3 className="year-description">Year Released: {details.year} | Rated: {details.rated}</h3>
+                <h4 className="movie-description">{details.description}</h4>
                 <h5>Director: {details.director}</h5>
                 <h5>Genres: {details.genres}</h5>
                 <h5>Stars: {details.stars}</h5>
