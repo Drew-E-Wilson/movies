@@ -1,8 +1,10 @@
+import './searchForm.css'
+
 export default function SearchForm({ handleSubmit, handleChange, searchString }) {
 
     return (
         <div >
-            <form className="form-horizontal" onSubmit={handleSubmit}>
+            <form className="form-search" onSubmit={handleSubmit}>
                 <input
                     className="search-bar"
                     type="text"
@@ -11,7 +13,7 @@ export default function SearchForm({ handleSubmit, handleChange, searchString })
                     value={searchString}
                     required
                 />
-                <button type="submit">Search</button>
+                <button type="submit" className="submit-button">Search</button>
             </form>
         </div>
     )

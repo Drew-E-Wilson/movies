@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import SearchForm from '../search/searchFrom';
 import SearchResults from '../search/searchResults';
 import MovieInfo from '../info/movieInfo';
@@ -44,12 +44,12 @@ const Movie = () => {
 
   return (
     <>
-      <div class="header-container">
-        <h1>Movie List</h1>
+      <div className="header-container">
+        <Link to='/' className="header-link"><h1>Movie List</h1></Link>
         <SearchForm handleChange={handleChange} handleSubmit={handleSubmit} searchString={searchString} />
       </div>
       <Route path="/" exact render={() => <SearchResults movies={movies} />} />
-      <Route path='/:id' component={MovieInfo} movies={movies} />
+      <Route path='/:id' component={MovieInfo} />
     </>
   );
 }

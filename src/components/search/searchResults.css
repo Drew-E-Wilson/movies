@@ -1,0 +1,41 @@
+.search-results{
+     max-width: 800px;
+     margin: auto;
+     padding-top: 10px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+}
+
+.intro-text {
+    margin-top: 180px;
+    font-size: 42px;
+    color: #E1E5F2;
+    font-family: 'Anton', sans-serif;
+    text-shadow: 1px 1px 1px #022B3A;
+}
+
+.individual-movie {
+    height: 310px;
+    width: 200px;
+    overflow: hidden;
+    background-color: #E1E5F2;
+    margin: 30px;
+}
+
+.movie-title {
+    padding: 5px;
+    background-color: #1F7A8C;
+    margin: auto;
+    
+}
+
+.movie-link{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.poster {
+    height: 280px;
+    width: 200px;
+}
