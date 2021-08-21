@@ -5,6 +5,7 @@ export default function MovieInfo(props, { movies }) {
     console.log(movies)
     const [details, setDetails] = useState([])
 
+    // fetching to get the movie details so I can display them on the page
     const getMovieDetails = async () => {
         try {
             const response = await fetch(`https://stark-tundra-95984.herokuapp.com/https://icebox-interview-api.herokuapp.com/movies/${props.match.params.id}`, {
@@ -25,7 +26,6 @@ export default function MovieInfo(props, { movies }) {
         getMovieDetails()
     }, [])
 
-    console.log(details)
     return (
         <div className="detail-background">
             <div className="detail-container">

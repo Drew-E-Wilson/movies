@@ -11,6 +11,7 @@ const Movie = () => {
   const [movies, setMovies] = useState([]);
   const [searchString, setSearchString] = useState([''])
 
+  // fetching the titles to display on the home page.
   const getMovieTitles = async () => {
     try {
       const response = await fetch(`https://stark-tundra-95984.herokuapp.com/https://icebox-interview-api.herokuapp.com/movies/titles/${searchString}`, {
@@ -28,19 +29,16 @@ const Movie = () => {
     }
   }
 
-  // console.log(movies)
-
-
+  //grabbing the value in the search bar
   const handleChange = (event) => {
     setSearchString(event.target.value)
   }
 
+  // used so the page doesnt reload right away
   const handleSubmit = (event) => {
     event.preventDefault();
     getMovieTitles(searchString)
   }
-
-
 
   return (
     <>
@@ -49,7 +47,7 @@ const Movie = () => {
         <SearchForm handleChange={handleChange} handleSubmit={handleSubmit} searchString={searchString} />
       </div>
       <Switch>
-        <Route path="/" exact render={() => <SearchResults movies={movies} />} />
+        <Route path="/movies" exact render={() => <SearchResults movies={movies} />} />
         <Route path='/:id' component={MovieInfo} />
       </Switch>
     </>
