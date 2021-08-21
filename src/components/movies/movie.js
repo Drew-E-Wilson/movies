@@ -1,11 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
 import SearchForm from './searchFrom';
+import SearchResults from '../searchResults';
 
 
 const Movie = () => {
 
-  const [movies, setMovies] = useState({});
+  const [movies, setMovies] = useState([]);
   const [searchString, setSearchString] = useState([''])
 
   const getMovieTitles = async () => {
@@ -25,7 +26,7 @@ const Movie = () => {
     }
   }
 
-  console.log(movies)
+  // console.log(movies)
 
 
   const handleChange = (event) => {
@@ -39,7 +40,6 @@ const Movie = () => {
 
 
 
-
   const getMovieDetails = () => {
 
   }
@@ -48,6 +48,7 @@ const Movie = () => {
     <>
       <h1>Movie List</h1>
       <SearchForm handleChange={handleChange} handleSubmit={handleSubmit} searchString={searchString} />
+      <SearchResults movies={movies} />
     </>
   );
 }
