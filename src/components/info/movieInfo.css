@@ -6,6 +6,15 @@
 }
 
 .detail-background {
-    background-color: #FFFCF2;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(#FFFCF2, #c2b6b5);
+    /* background-color: #FFFCF2; */
     height: 90vh;
+    
+}
+
+.detail-container {
+    
+    max-width: 700px;
 }

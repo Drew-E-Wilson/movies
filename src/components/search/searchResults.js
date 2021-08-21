@@ -33,7 +33,7 @@ export default function SearchResults({ movies }) {
 
     return (
         <div className="search-results">
-            {movies.length === 0 ? <h3 className="intro-text">Search for your favorite movies now! Discover actors, release dates and more for your favorite films. </h3> : movies.map((movie) => {
+            {movies.length === 0 ? <h3 className="intro-text">Search for your favorite movies now!<br></br> Discover actors, release dates and more for your favorite films. </h3> : movies.map((movie) => {
 
                 return (
                     <Link to={`/${movie.id}`} key={movie.id} className="movie-link">
