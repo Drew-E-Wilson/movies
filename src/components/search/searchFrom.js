@@ -1,6 +1,13 @@
 import './searchForm.css'
+import { useHistory } from 'react-router-dom';
 
 export default function SearchForm({ handleSubmit, handleChange, searchString }) {
+
+    const history = useHistory()
+
+    const newSearch = () => {
+        return history.push('./')
+    }
 
     return (
         <div>
@@ -11,9 +18,9 @@ export default function SearchForm({ handleSubmit, handleChange, searchString })
                     placeholder="Search a movie..."
                     onChange={handleChange}
                     value={searchString}
-                // required
+                    required
                 />
-                <button type="submit" className="submit-button">Search</button>
+                <button type="submit" className="submit-button" onClick={newSearch}>Search</button>
             </form>
         </div>
     )

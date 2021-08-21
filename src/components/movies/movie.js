@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, Link, Switch } from 'react-router-dom';
 import SearchForm from '../search/searchFrom';
 import SearchResults from '../search/searchResults';
 import MovieInfo from '../info/movieInfo';
@@ -48,8 +48,10 @@ const Movie = () => {
         <Link to='/' className="header-link"><h1>Movie List</h1></Link>
         <SearchForm handleChange={handleChange} handleSubmit={handleSubmit} searchString={searchString} />
       </div>
-      <Route path="/" exact render={() => <SearchResults movies={movies} />} />
-      <Route path='/:id' component={MovieInfo} />
+      <Switch>
+        <Route path="/" exact render={() => <SearchResults movies={movies} />} />
+        <Route path='/:id' component={MovieInfo} />
+      </Switch>
     </>
   );
 }
