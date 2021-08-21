@@ -1,10 +1,10 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 
-
 const Movie = () => {
 
   const [movies, setMovies] = useState({});
+  const [searchStirng, setSearchString] = useState([''])
 
   const getMovieTitles = async () => {
     try {
@@ -12,11 +12,12 @@ const Movie = () => {
         "method": "GET",
         "headers": {
           Accept: 'application/json',
-          Authorization: 'Bearer IceboxT3st!'
+          Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
         }
       })
       let data = await response.json()
       setMovies(data)
+      setSearchString('')
     } catch (error) {
       console.log(error)
     }
