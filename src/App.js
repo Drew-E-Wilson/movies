@@ -4,7 +4,7 @@ import Movie from './components/movies/movie';
 const App = () => {
   return (
     <div className="App">
-        <Movie/>
+      <Movie />
     </div>
   );
 }

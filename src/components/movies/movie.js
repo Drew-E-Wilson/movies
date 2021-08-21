@@ -1,7 +1,9 @@
-import React from 'react';
-import { useState } from 'react';
-import SearchForm from './searchFrom';
-import SearchResults from '../searchResults';
+import React, { useState } from 'react';
+import { Route } from 'react-router-dom';
+import SearchForm from '../search/searchFrom';
+import SearchResults from '../search/searchResults';
+import MovieInfo from '../info/movieInfo';
+import "./movie.css"
 
 
 const Movie = () => {
@@ -40,15 +42,14 @@ const Movie = () => {
 
 
 
-  const getMovieDetails = () => {
-
-  }
-
   return (
     <>
-      <h1>Movie List</h1>
-      <SearchForm handleChange={handleChange} handleSubmit={handleSubmit} searchString={searchString} />
-      <SearchResults movies={movies} />
+      <div class="header-container">
+        <h1>Movie List</h1>
+        <SearchForm handleChange={handleChange} handleSubmit={handleSubmit} searchString={searchString} />
+      </div>
+      <Route path="/" exact render={() => <SearchResults movies={movies} />} />
+      <Route path='/:id' component={MovieInfo} movies={movies} />
     </>
   );
 }
